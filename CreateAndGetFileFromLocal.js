@@ -34,6 +34,6 @@ function CreateAndGetFile(allowFormat = '.html, .htm', createType = 'iframe', af
 	fileInput.addEventListener('click', () => { getFile(fileInput, outputEl); }, { once: true });
 	fileInput.click();
 }
-CreateAndGetFile('.html', 'iframe', (el) => { console.log(el.id, "is loaded!"); });
+// CreateAndGetFile('.html', 'iframe', (el) => { console.log(el.id, "is loaded!"); });
 // "CreateAndGetFile('.txt', 'script', (el) => { CreateAndGetFile('.html', 'iframe'); });", "CreateAndGetFile('.html', null, (el) => { window['VarWithFile'] = { base64: el.src, blob: el.objectURL }; }, true);", etc. //
 // Made by Japanese Schoolgirl (Lisa)
