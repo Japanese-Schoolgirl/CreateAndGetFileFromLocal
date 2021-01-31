@@ -1,14 +1,14 @@
 // This is just my quickly made spaghetti template for the bookmarklets which helps with using some local files
-function CreateAndGetFile(allowFormat = '.html, .htm', createType = 'iframe', afterLoadFunc = null, needBlob = null, act = 'readAsDataURL')
+function CreateAndGetFile(allowFormat = '.html, .htm', createType = 'iframe', afterLoadFunc = null, needBlob = null, act = 'readAsDataURL', appendTarget = document.body, elProp = "src")
 {
-	function getFile(fileInput = null, outputEl, appendTarget = document.body)
+	function getFile(fileInput = null, outputEl)
 	{
 		if(!fileInput || !outputEl) { return }
 
 		let ReaderInstance  = new FileReader();
 		ReaderInstance.onloadend = () =>
 		{
-			outputEl.src = ReaderInstance.result;
+			outputEl[elProp] = ReaderInstance.result;
 			if(afterLoadFunc) { outputEl.addEventListener('load', () => { afterLoadFunc(outputEl); }, { once: true }); }
 			if(outputEl.tagName == 'NONE') { afterLoadFunc(outputEl); outputEl.remove(); }
 		}
