@@ -35,5 +35,5 @@ function CreateAndGetFile(allowFormat = '.html, .htm', createType = 'iframe', af
 	fileInput.click();
 }
 // CreateAndGetFile('.html', 'iframe', (el) => { console.log(el.id, "is loaded!"); });
-// "CreateAndGetFile('.txt', 'script', (el) => { CreateAndGetFile('.html', 'iframe'); });", "CreateAndGetFile('.html', null, (el) => { window['VarWithFile'] = { base64: el.src, blob: el.objectURL }; }, true);", etc. //
+// "CreateAndGetFile('.txt', 'script', (el) => { CreateAndGetFile('.html', 'iframe'); });", "CreateAndGetFile('.html', null, (el) => { window['VarWithFile'] = { base64: el.src, blob: el.objectURL }; }, true);", "CreateAndGetFile('.txt', 'text', (el) => { window['VarWithFile'] = { base64: el.src, blob: el.objectURL }; }, true, 'readAsText', undefined, 'innerText');", "CreateAndGetFile('.txt', 'iframe', (el) => { window['VarWithFile'] = { base64: el.src, blob: el.objectURL }; }, true, undefined, undefined, 'src');", "CreateAndGetFile('.png, .jpg', 'img', (el) => { window['VarWithFile'] = { base64: el.src, blob: el.objectURL }; alert(`Blob link: ${VarWithFile.blob} \nAnd base64 link: ${VarWithFile.base64}`) }, true, undefined, undefined, 'src');", etc. //
 // Made by Japanese Schoolgirl (Lisa)
