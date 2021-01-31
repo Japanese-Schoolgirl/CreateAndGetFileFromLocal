@@ -1,5 +1,5 @@
 // This is just my quickly made spaghetti template for the bookmarklets which helps with using some local files
-function CreateAndGetFile(allowFormat = '.html, .htm', createType = 'img', afterLoadFunc = null, needBlob = null, act = 'readAsDataURL')
+function CreateAndGetFile(allowFormat = '.html, .htm', createType = 'iframe', afterLoadFunc = null, needBlob = null, act = 'readAsDataURL')
 {
 	function getFile(fileInput = null, outputEl, appendTarget = document.body)
 	{
